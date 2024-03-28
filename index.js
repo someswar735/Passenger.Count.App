@@ -65,11 +65,11 @@ function playDecrementAnimation() {
     const allBoxes = document.querySelectorAll('.box');
     let delay = 0;
     const animations = {
-        9: 'RightFootback.jpg',
+        9: 'RFB.jpg',
         8: 'LeftFootBack.png',
-        5: 'RightFootback.jpg',
+        5: 'RFB.jpg',
         4: 'LeftFootBack.png',
-        1: 'RightFootback.jpg'
+        1: 'RFB.jpg'
     };
 
     Object.keys(animations).forEach((boxIndex) => {
