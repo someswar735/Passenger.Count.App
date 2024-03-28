@@ -1,0 +1,149 @@
+body {
+    background-color: #8897c9;
+    background-image: url('bg.jpeg');
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    transition: font-size 0.3s ease; 
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    background: rgba(0, 123, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+button:hover {
+    background: rgba(0, 123, 255, 1); 
+}
+
+#decrement-btn {
+    background: rgba(220, 53, 69, 0.8); 
+}
+
+#decrement-btn:hover {
+    background: rgba(220, 53, 69, 1); 
+}
+
+#save-el {
+    margin-top: 20px;
+}
+
+#save-btn {
+    background: rgba(40, 167, 69, 0.8); 
+}
+
+#save-btn:hover {
+    background: rgba(40, 167, 69, 1); 
+}
+
+.alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.alert.show {
+    display: block;
+}
+
+#footprints {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-image: url('footprints.png'); 
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+
+.walk-forward {
+    animation: walkForward 0.5s steps(4) forwards; 
+}
+
+.walk-backward {
+    animation: walkBackward 0.5s steps(4) forwards; 
+}
+
+.love {
+    animation: loveAnimation 1s ease-in-out; 
+}
+
+@keyframes walkForward {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}
+
+@keyframes walkBackward {
+    from { background-position: -400px 0; }
+    to { background-position: 0 0; }
+}
+
+@keyframes loveAnimation {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+.animation-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+
+.box.active {
+    opacity: 1;
+    background-image: url('footprints.png');
+    background-size: cover;
+}
+.save-container{
+    transition: opacity 0.3s ease;
+}
+
+
+.noted-img {
+    width: 200px; 
+    height: auto; 
+}
